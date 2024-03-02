@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body style="background-color: black; overflow-x: hidden;">
+    <div id="body">
+
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" id="About">About Us</a>
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="Terms">Terms & condition</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="refund">Refund & Return</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- <i class="fa-duotone fa-cart-shopping"></i> -->
+                            <i class="fa-light fa-cart-shopping" id="cart" onclick="showcart()">cart</i>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="conatainerr inactive" id="conatainer">
+            <div id="root">
+                <div class="sidebar">
+
+                    <div class="head">
+                        <p>My cart</p>
+                    </div>
+                    <div id="cart-item">Your cart is empty</div>
+                    <div id="foot">
+                        <h3 id="total">total</h3>
+                        
+                        <button id="btn" onclick="check()">Check Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="home">
+
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="onlinecourses.webp" class="d-block w-100" alt="..." style="height: 500px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="E_books.webp" class="d-block w-100" alt="..." style="height: 500px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Digital_contents.webp" class="d-block w-100" alt="..." style="height: 500px;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="E_books.webp" class="card-img-top images" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title title">E-learning Courses</h5>
+                        <h5 class="price">Price .00</h5>
+                        <p class="card-text"> Ebooks are a familiar digital format across audiences and can be accessed
+                            via an ereader, computer, or mobile device. You can write an ebook on anything—but before
+                            you commit to a topic, research the availability of free content on your subject.</p>
+                        <a href="#" class="btn  " id="btun" onclick="addToCart('E-learning Courses', 20.00)">Add to cart</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="membership.webp" class="card-img-top images" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title title">Digital Membership</h5>
+                        <h5 class="price">Price .00</h5>
+                        <p class="card-text">Digital memberships are golden tickets to an exclusive community centered
+                            around your brand or content. Joining your digital club could bestow members with access to
+                            premium content, the opportunity to purchase limited-edition merchandise, or tickets to
+                            events.</p>
+                        <a href="#" class="btn  " id="btun" onclick="addToCart('Digital Membership',30.00)" >Add to cart</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="Digital_templates.webp" class="card-img-top images" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title title">Digital Templates</h5>
+                        <h5 class="price">Price .00</h5>
+                        <p class="card-text">Digital products also come in the form of tools, equipping professionals to
+                            do tasks more quickly or competently. You can sell digital solutions to common pain points
+                            within a role or common online task, such as video editing.</p>
+                        <a href="#" class="btn  " id="btun" onclick="addToCart('Digital Templates',25.00)">Add to cart</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="digital_service.webp" class="card-img-top images" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title title">Digital Service</h5>
+                        <h5 class="price">Price .00</h5>
+                        <p class="card-text">Services pair well with digital products. A designer can offer a
+                            logo-creation service alongside downloadable templates. A personal trainer might offer live
+                            personal training sessions to their workout plan subscribers. Likewise, you can position
+                            services—digital or in real life—as add-ons to your online products.</p>
+                        <a href="#" class="btn  " id="btun" onclick="addToCart('Digital service',20.00)">Add to cart</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="card" style="width: 18rem;">
+                    <img src="Digital_contents.webp" class="card-img-top images" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title title">Digital Contents</h5>
+                        <h5 class="price">Price .00</h5>
+                        <p class="card-text">From stock photos to video footage, music, and sound effects, there’s a
+                            global ecosystem of licensable digital assets uploaded by creatives for other creatives to
+                            use in their work.</p>
+                        <a href="#" class="btn  " id="btun" onclick="addToCart('Digital content',30.00)">Add to cart</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="onlinecourses.webp" class="card-img-top images" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title title">Online Courses</h5>
+                        <h5 class="price">Price .00</h5>
+                        <p class="card-text">Online courses are the best way to present in-depth content in a monetized
+                            digital format. You can create a presentation, record a video walk-through, or develop a
+                            course featuring the voices of subject-matter experts.</p>
+                        <a href="#" class="btn  " id="btun" onclick="addToCart('Online Courses',30.00)">Add to cart</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="music.webp" class="card-img-top images" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title title">Music And Entertaiment</h5>
+                        <h5 class="price">Price .00</h5>
+                        <p class="card-text">Digital product ideas don't have to be purely functional. If you’re a
+                            musician, artist, or content creator, chances are you’ve explored these or similar ways to
+                            monetize your talents online.</p>
+                        <a href="#" class="btn  " id="btun" onclick="addToCart('Music And Entertaiment',25.00)">Add to cart</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="printable dital product.webp" class="card-img-top images" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title title">Printable</h5>
+                        <h5 class="price">Price .00</h5>
+                        <p class="card-text">This category of digital products spans a wide range of print-at-home
+                            possibilities, from personalized wall art and planners to specialized models for 3D
+                            printers. Customers can download and print your designs for personal use or as part of their
+                            own craft.</p>
+                        <a href="#" class="btn  " id="btun" onclick="addToCart('printable products',50.00)">Add to cart</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+        <section class="terms inactive">
+            <h1>Terms and Conditions</h1>
+        </section>
+
+        <section class="Refund inactive">
+            Refund and Retur Policy
+        </section>
+
+        <section class="About inactive">
+            <h1>About us page</h1>
+        </section>
+    </div>
+    <!-- check out page -->
+
+    <div class="container inactive" id="main">
+
+
+       
+        <form id="checkoutForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+
+            <button type="button" onclick="processPayment()" style="background-color: rgb(192, 102, 222);">Process Payment</button>
+        </form>
+
+        <div id="orderDetails" style="display: none;">
+            <h3>Order Details</h3>
+            <p>Name: <span id="orderName"></span></p>
+            <p>Email: <span id="orderEmail"></span></p>
+            <p>Address: <span id="orderAddress"></span></p>
+            <p>Card Number: <span id="orderCardNumber"></span></p>
+            <p>Expiry Date: <span id="orderExpiryDate"></span></p>
+            <p>CVV: <span id="orderCVV"></span></p>
+        </div>
+        <!-- payment processed model -->
+        <div id="paymentProcessedModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <i class="fa-solid fa-thumbs-up"></i>
+                <p>Payment processed successfully!</p>
+                <!-- You can add an animated checkmark or any other animation here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" style="width: 100%;">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Contact Us</h4>
+                    <p>Email: dasurpita@gmail.com</p>
+                    <p>Phone: </p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Follow Us</h4>
+                    <ul class="social-media">
+                        <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+nav{
+    background-color: rgb(224, 147, 224);
+    color: black;
+    margin-bottom: 20px;
+}
+#btun{
+    background-color: rgb(224, 147, 224);
+     color: black;
+}#btun:hover{
+    background-color: black;
+    color: #fff;
+}
+/* .inactive{
+    display: none;
+} */
+.home{
+    margin-bottom: 20px;
+}
+.card{
+    margin: 30px;
+
+}
+p{
+    font-size: 10px;
+}
+
+.containerr{
+    display: flex;
+    width: 50%;
+    margin-top: 20px;
+}
+#root{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2.1fr);
+    grid-gap:20px;
+}
+.sidebar{
+    width: 40%;
+    border-radius: 5px;
+    background-color: aliceblue;
+    margin-left: 800px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+
+}
+.head{
+    background-color: plum;
+    border-radius: 3px;
+    height:40px;
+    align-items: center;
+}
+#foot{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding:10px 0px ;
+    border-top: 1px solid #333;
+
+}
+
+/* check out */
+
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .modal-content {
+    background-color: #6ad1d7;
+    padding: 400px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .close-btn {
+    cursor: pointer;
+    /* position: absolute; */
+    top: 10px;
+    right: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #05051c;
+  }
+  /* i{
+      font-size: 50px;
+  } */
+  .inactive{
+      display: none;
+  }
+  footer{
+    width: 1400px;
+  }
